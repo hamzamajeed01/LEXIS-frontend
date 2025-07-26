@@ -83,7 +83,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     const response = await fetch(`${apiUrl}${url}`, {
       ...options,
       headers: headers as Record<string, string>,
-      credentials: 'include',
     });
 
     // ✅ SECURE: Handle 401 by logging out user
@@ -109,7 +108,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json',
         },
-        credentials: 'include',
       });
       
       if (response.ok) {
@@ -141,7 +139,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       const response = await fetch(`${apiUrl}/api/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        credentials: 'include',
         body: JSON.stringify({ email, password }),
       });
 
@@ -181,7 +178,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         await fetch(`${apiUrl}/api/auth/logout`, { 
           method: 'POST',
           headers: { 'Authorization': `Bearer ${token}` },
-          credentials: 'include',
         });
       }
     } catch (error) {
@@ -205,7 +201,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       const response = await fetch(`${apiUrl}/api/auth/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        credentials: 'include',
         body: JSON.stringify(data),
       });
 
