@@ -247,15 +247,15 @@ export default function Sidebar({
           {!isCollapsed ? (
             <button
               onClick={() => logout()}
-              className="w-full flex items-center space-x-3 px-4 py-3 text-sm font-medium text-slate-700 hover:text-red-600 hover:bg-red-50 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 group"
+              className="w-full flex items-center space-x-3 px-4 py-3 text-sm font-medium text-red-600 hover:text-red-600 hover:bg-red-50 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 group"
             >
-                             <LogOut className="h-5 w-5 group-hover:text-red-600 transition-colors" />
+                             <LogOut className="h-5 w-5 group-hover:text-red-400 transition-colors" />
                <span>Logout</span>
             </button>
           ) : (
             <button
               onClick={() => logout()}
-              className="w-full p-2 text-slate-700 hover:text-red-600 hover:bg-red-50 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+              className="w-full p-2 text-red-600 hover:text-red-500 hover:bg-red-50 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
                              title="Logout"
             >
               <LogOut className="h-5 w-5 mx-auto" />

@@ -49,7 +49,7 @@ const nextConfig = {
               "style-src 'self' 'unsafe-inline'",
               "img-src 'self' data: https:",
               "font-src 'self' data:",
-              "connect-src 'self' http://localhost:5000 https:",
+              "connect-src 'self' http://localhost:5000 https: https://web-production-b3631.up.railway.app",
               "frame-ancestors 'none'",
               "base-uri 'self'",
               "form-action 'self'",

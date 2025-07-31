@@ -381,9 +381,9 @@ function DashboardContent() {
               <EmptyState
                 title="Welcome to LEXIS"
                 description="Create a new case or select an existing one to get started with AI-powered legal document analysis"
-                actionLabel="Create New Case"
-                onAction={() => useAppStore.getState().setCreateCaseModalOpen(true)}
-                icon={<FileText className="h-16 w-16 text-slate-400" />}
+                // actionLabel="Create New Case"
+                // onAction={() => useAppStore.getState().setCreateCaseModalOpen(true)}
+                // icon={<FileText className="h-16 w-16 text-slate-400" />}
               />
             </div>
           )}

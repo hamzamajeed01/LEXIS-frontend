@@ -198,6 +198,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       setIsLoading(true);
       
       const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+      console.log('Raw env var:', process.env.NEXT_PUBLIC_API_URL);
+      console.log('Final apiUrl:', apiUrl);
       const response = await fetch(`${apiUrl}/api/auth/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
